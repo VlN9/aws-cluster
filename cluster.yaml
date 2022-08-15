@@ -1,0 +1,12 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: vladimir-cluster
+  region: eu-west-2
+
+nodeGroups:
+  - name: ng-1-workers
+    instanceType: t2.micro
+    desiredCapacity: 7
+
