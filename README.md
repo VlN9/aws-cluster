@@ -2,7 +2,8 @@
 # aws-cluster
 ### What is it
   This project is test of possibility integration  Elastic Kubernetes Services an Prometheus monitoring system.
-### What do you need
+  Iis is config of simple cluster consists of two apache servers which is based on vladimir99/apache-alpine images and Prometheus monitoring system which is based  on prom/prometheus image for Prometheus and prom/node-exporter image for node-exporter sytem.
+  ### What do you need
   * Account in AWS
   * Installed eksctl tool
   * Installed kubectl tool
@@ -41,13 +42,13 @@ $ eksctl create cluster -f cluster.yaml
 
 __Step three__
 
-Deploying two simple web-app in our cluster:
+Deploying two simple web-apps in our cluster:
 ```
 $ kubectl create deploy -f main-deploy.yaml
 ```
 __Step four__
 
-Create servise load balancer type for our simple web-app
+Create servise load balancer type for our apps
 ```
 $ kubectl create -fdeploy-service.yaml
 ```
@@ -63,7 +64,7 @@ Create role:
 ```
 $ kubectl create -f clusterRole.yaml
 ```
-Create config map for our cluster:
+Create config map for cluster:
 ```
 $ kubectl -f config-map.yaml
 ```
@@ -76,7 +77,7 @@ $ kubectl create -f prometheus-service.yaml
 ```
 __Step six__
 
-Createing nod-exporter and his servise:
+Createing nod-exporters and his endpoints:
 ```
 $ kubectl create -f daemonset.yaml
 ```
@@ -84,21 +85,21 @@ $ kubectl create -f daemonset.yaml
 $ kubectl create -f exporter-service.yaml
 ```
 ---
-Congrats, your cluster with two simple web-app, them service and ready to use Prometheus monitoring system already created.
->All web-app and also Prometheus available in your Load Balancer. You can check this here: <br>
-[To get web-app LB](#web-app) <br>
+Congrats, your cluster with two simple web-apps and ready to use Prometheus monitoring system already created.
+>All web-app and also Prometheus available in your Load Balancers You can check this here: <br>
+[To get web-apps LB](#web-app) <br>
 [To get Prometheus](#pometheus)
 
-Also you can chek your pods with web-app using next command:
+Also you can chek your pods with web-apps using next command:
 ```
 $ kubectl get pod
 ```
 <a id="web-app"></a>
-Them service is available whis next command: 
+Them service is available whith next command: 
 ```
 $ kubectl get svc
 ```
-To check your monitoring pods and servise use next commands:
+To check your monitoring pods and servises use next commands:
 ```
 $ kubectl get pod -n monitoring 
 ```
