@@ -1,8 +1,8 @@
 <a id="achor"></a>
 # aws-cluster
 ### What is it
-  This project is test of possibility integration  Elastic Kubernetes Services an Prometheus monitoring system.
-  Iis is config of simple cluster consists of two apache servers which is based on vladimir99/apache-alpine images and Prometheus monitoring system which is based  on prom/prometheus image for Prometheus and prom/node-exporter image for node-exporter sytem.
+  This project is test of possibility integration  Elastic Kubernetes Services an Prometheus monitoring system.<br>
+  This is config of simple cluster consists of two apache servers which is based on vladimir99/apache-alpine images and Prometheus monitoring system which is based  on prom/prometheus image for Prometheus and prom/node-exporter image for node-exporter sytem.
   ### What do you need
   * Account in AWS
   * Installed eksctl tool
