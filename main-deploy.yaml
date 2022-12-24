@@ -1,31 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web1
-  labels:
-    app: web1
-
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      project: web1
-  template:
-    metadata:
-      labels:
-        project: web1
-    spec:
-      containers:
-        - name: web1
-          image: vladimir99/apache-alpine:v1
-          ports:
-            - containerPort: 80
-
----
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
   name: main
   labels:
     app: main
