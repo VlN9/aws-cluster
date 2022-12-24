@@ -50,7 +50,7 @@ __Step four__
 
 Create servise load balancer type for our apps
 ```
-$ kubectl create -fdeploy-service.yaml
+$ kubectl create -f deploy-service.yaml
 ```
 __Step five__
 
