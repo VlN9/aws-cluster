@@ -9,3 +9,4 @@ else
     eksctl $ACTION cluster -f cluster.yaml
     export RECORD_ACTION="DELETE"
     ./deploy-dns-record.sh
+fi
