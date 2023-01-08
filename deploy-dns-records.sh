@@ -1,4 +1,4 @@
-\#!/bin/bash
+#!/bin/bash
 
 export MONITORING_ELB=`kubectl get service -n monitoring | grep -wo "[(a-z)(0-9)-\.]*.elb.amazonaws.com"`
 export APP_ELB=`kubectl get service | grep -wo "[(a-z)(0-9)-\.]*.elb.amazonaws.com"`
