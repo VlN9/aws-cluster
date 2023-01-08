@@ -6,7 +6,7 @@ if [ "$ACTION" == "create" ]; then
     export RECORD_ACTION="CREATE"
     ./deploy-dns-records.sh
 else
-    eksctl $ACTION cluster -f cluster.yaml
     export RECORD_ACTION="DELETE"
     ./deploy-dns-records.sh
+    eksctl $ACTION cluster -f cluster.yaml
 fi
