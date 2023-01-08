@@ -54,9 +54,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>if [ &quot;$BUILD_NUMBER&quot; == &quot;1&quot; ]: then
-    mkdir -p $HOME/bin &amp;&amp; cp ~/kubectl $HOME/bin/kubectl &amp;&amp; export PATH=$PATH:$HOME/bin
-fi
+      <command>mkdir -p $HOME/bin &amp;&amp; cp ~/kubectl $HOME/bin/kubectl &amp;&amp; export PATH=$PATH:$HOME/bin
 
 export HOSTED_ZONE_NAME=$YourName
 export HOSTED_ZONE_ID=$YourHZID
