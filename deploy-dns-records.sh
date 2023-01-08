@@ -17,7 +17,7 @@ aws route53 change-resource-record-sets --hosted-zone-id $HOSTED_ZONE_ID --chang
      ,"Type": "A"
      ,"AliasTarget": {
         "HostedZoneId": "'"$REGION_ZONE_ID"'"
-       ,"DNSName": "dualstack.'"$APP_ELB"'"
+       ,"DNSName": dualstack."'"$APP_ELB"'"
        ,"EvaluateTargetHealth": false
       }
     }
@@ -29,7 +29,7 @@ aws route53 change-resource-record-sets --hosted-zone-id $HOSTED_ZONE_ID --chang
      ,"Type": "A"
      ,"AliasTarget": {
         "HostedZoneId": "'"$REGION_ZONE_ID"'"
-       ,"DNSName": "dualstack.'"$MONITORING_ELB"'"
+       ,"DNSName": dualstack."'"$MONITORING_ELB"'"
        ,"EvaluateTargetHealth": false
       }
     }
