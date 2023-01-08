@@ -25,7 +25,7 @@ aws route53 change-resource-record-sets --hosted-zone-id $HOSTED_ZONE_ID --chang
  ,{
     "Action": "'"$RECORD_ACTION"'"
    ,"ResourceRecordSet": {
-      "Name": "prometheus.'"$HOSTED_ZONE_NAME"'"
+      "Name": "monitoring.'"$HOSTED_ZONE_NAME"'"
      ,"Type": "A"
      ,"AliasTarget": {
         "HostedZoneId": "'"$REGION_ZONE_ID"'"
