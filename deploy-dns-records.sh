@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export MONITORING_ELB=`kubectl get service -n monitoring | grep -Ewo "\w[-]*.\w{2}-\w{4,10}-[1-3].elb.amazonaws.com"`
-export APP_ELB=`kubectl get service | grep -Ewo "\w[-]*.\w{2}-\w{4,10}-[1-3].elb.amazonaws.com"`
+export MONITORING_ELB=`kubectl get service -n monitoring | grep -Ewo "[a-z0-9\-]*.\w{2}-\w{4,10}-[1-3].elb.amazonaws.com"`
+export APP_ELB=`kubectl get service | grep -Ewo "[a-z0-9\-]*.\w{2}-\w{4,10}-[1-3].elb.amazonaws.com"`
 export REGION_ZONE_ID=`aws elb describe-load-balancers --region eu-west-2 | grep -wo -m 1 "Z[(A-Z)(0-9)]*"`
 
 echo $MONITORING_ELB
